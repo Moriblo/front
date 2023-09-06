@@ -1,4 +1,4 @@
-/* > ROTA PARA LISTAR ITENS - GET EM /obras
+/* > ROTA PARA LISTAR ITENS - /obras/GET
   --------------------------------------------------------------------------------------
   Função para obter a lista existente do servidor via requisição GET pela Rota /obras.
   --------------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ const getList = async () => {
 */
 getList()
 
-/* > ROTA PARA ADIÇÃO DE ITEM - POST EM /obra
+/* > ROTA PARA ADIÇÃO DE ITEM - /obra/POST
   --------------------------------------------------------------------------------------
   Função para colocar um item na lista do servidor via requisição POST na rota /obra.
   --------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ function removeElement() {
   }
 }
 
-/* > ROTA PARA DELEÇÃO /obra?
+/* > ROTA PARA DELETAR ITENS - /obra/DELETE
   --------------------------------------------------------------------------------------
   Função para deletar um item da lista do servidor via requisição DELETE na Rota /obra
   --------------------------------------------------------------------------------------
@@ -127,11 +127,11 @@ const newItem = async() => {
   
   // Mostra a mensagem de carregamento
   const loadingMessage = document.getElementById("loading-message");
-  loadingMessage.classList.remove("hidden"); // HTML: "Aguarde, em processamento..."
+  loadingMessage.classList.remove("hidden"); // HTML: "Por favor, aguarde em processamento..."
 
   try{
 
-    // Verifica se há algum campo obrigatório vazio (1ª Regra de Negócio)
+    // 1ª Regra de Negócio (RN1) - Verifica se há algum campo obrigatório vazio
     if (inputNome === '' || inputArtista === ''|| inputEstilo === '' || inputTipo === '') {
       alert("A exceção do campo Link que é opcional, todos os demais campos devem estar preenchidos!");
       return; // Sai da função se houver campos vazios
@@ -212,9 +212,9 @@ function insertList(nome, artista, estilo, tipo, link) {
   removeElement();
 }
 
-/* > ROTA PARA CONSULTA OBRA E ARTISTA NA BASE (2ª Regra de Negócio)
+/* > ROTA PARA CONSULTA OBRA E ARTISTA - 5000/obrart/GET
   --------------------------------------------------------------------------------------
-  Regra de Negócio: Não permitir tupla Obra + Artista duplicada na base
+  2ª Regra de Negócio (RN2): Não permitir tupla Obra + Artista duplicada na base
   --------------------------------------------------------------------------------------
 */
 const getobrart = async (obra_nome, obra_artista) => {
@@ -236,7 +236,7 @@ const getobrart = async (obra_nome, obra_artista) => {
   }
 };
 
-/* > ROTA PARA TRADUÇÃO /tradutor?
+/* > ROTA PARA TRADUÇÃO DA OBRA (PORT->ING) - 5001/tradutor
 --------------------------------------------------------------------------------------
   Função para chamar uma rota para realizar a tradução da obra de português
   para inglês.
@@ -246,7 +246,10 @@ const gettradutor = async (valor_entrada) => {
   try {
     const url = `http://127.0.0.1:5001/tradutor?entrada=${valor_entrada}`;
     const response = await fetch(url, {
-      method: 'get'
+      method: 'get', headers: {
+        'Content-Type': 'application/json',
+        'X-Origin': 'Obras de Arte'
+      }
     });
 
     const data = await response.json();
@@ -261,7 +264,7 @@ const gettradutor = async (valor_entrada) => {
   }
 };
 
-/* > ROTA PARA BUSCA DE IMAGEM /smuseum?
+/* > ROTA PARA BUSCA DE LINK PARA IMAGEM - 5002/smuseum
 --------------------------------------------------------------------------------------
   Retorna um link de uma imagem para a obra informada no campo de preenchimento 
   obra, quando do registro de uma obra, a partir da pesquisa em uma
