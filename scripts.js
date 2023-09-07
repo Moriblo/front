@@ -183,6 +183,7 @@ const newItem = async() => {
   catch (error) {
     console.error(error);
   } finally {
+    // Esconde a mensagem de carregamento
     loadingMessage.classList.add("hidden"); // HTML: "Aguarde, em processamento..."
   }
 }
@@ -270,7 +271,6 @@ const gettradutor = async (valor_entrada) => {
   base de um museu informado. Neste caso estou utilizando o Metropolitan Museum.
 --------------------------------------------------------------------------------------
 */
-
 const getsmuseum = async (obraTraduzida, artista) => {
   try {
       // Construa a URL com os parâmetros

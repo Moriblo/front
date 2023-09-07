@@ -41,13 +41,6 @@ header {
     width: 100%;
 }
 
-.link-Readme_Front {
-    color: red;
-    font-size: 16px;
-    position: relative;
-    left: -40px;  
-}
-
 .newItem {
     background-color: rgb(225, 222, 199);
     padding: 30px 40px;
@@ -67,7 +60,7 @@ header {
     border: 1px solid rgb(35, 32, 24);
     width: 30%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #newQuantity {
@@ -75,7 +68,7 @@ header {
     border: 1px solid rgb(35, 32, 24);
     width: 30%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #newPrice {
@@ -83,7 +76,7 @@ header {
     border: 1px solid rgb(35, 32, 24);
     width: 10%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #newTipo {
@@ -91,7 +84,7 @@ header {
     border: 1px solid rgb(35, 32, 24);
     width: 10%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 #newLink {
@@ -99,7 +92,7 @@ header {
     border: 1px solid rgb(35, 32, 24);
     width: 20%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .addBtn {
