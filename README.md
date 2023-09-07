@@ -1,16 +1,16 @@
-# [smuseum]
- API_B2 do MVP da Sprint 3 do curso de pós gradução em Engenharia de Software da PUC.
- Trata-se de uma API para realização de busca de links de imagem para uma dada Obra e Artista.
-
+# [Front]
+MVP da Sprint 3 do curso de pós gradução em Engenharia de Software da PUC.
+Trata-se de um Projeto (Obras de Arte) que a partir das opções do usuário na interface, seleciona APIs, com serviços específicos a serem consumidos, com o objetivo final de disponibilizar um link de uma imagem para uma dada Obra e Artista.
+ 
 ## Arquitetura
-Arquitetura do Projeto Obras de Arte com destaque para a API_B2, que oferta o serviço de search nas rota de um museu especificado. Pela dificuldade em encontrar museus que disponibilizassem os links das imagens de suas obras sem restrição de "copyright", foi utilizado somente a base do metropolitan museum (MET).
+Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona a API a ser utilizada a medida das opções do usuário.
 
-![API_B2](https://github.com/Moriblo/smuseum/blob/main/API_B2.png)
+![Front](https://github.com/Moriblo/smuseum/blob/main/API_B2.png)
 
 ## Estrutura do Código e Chamadas
-Estrutura dos códigos de cada API e chamadas entre estes.
+Estrutura dos códigos de cada API e chamadas.
 
-![COMP_B2](https://github.com/Moriblo/smuseum/blob/main/COMP_B2.png)
+![COMP_A](https://github.com/Moriblo/smuseum/blob/main/COMP_B2.png)
 
 ## Projeto
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados [https://github.com/users/Moriblo/projects/2]
