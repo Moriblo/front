@@ -13,4 +13,4 @@ Estrutura dos códigos de cada API e chamadas.
 ![COMP_A](https://github.com/Moriblo/front/blob/main/COMP_A.png)
 
 ## Projeto
-Detalhamento dos requisitos (REQ) do MVP e demais issues tratados [https://github.com/users/Moriblo/projects/2]
+Detalhamento dos requisitos (REQ) do MVP e demais issues tratados [https://github.com/users/Moriblo/projects/2/views/5]
