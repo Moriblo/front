@@ -5,12 +5,12 @@ Trata-se de um Projeto (Obras de Arte) que a partir das opções do usuário na 
 ## Arquitetura
 Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona a API a ser utilizada a medida das opções do usuário.
 
-![Front](https://github.com/Moriblo/smuseum/blob/main/API_B2.png)
+![Front](https://github.com/Moriblo/front/blob/main/Front.png)
 
 ## Estrutura do Código e Chamadas
 Estrutura dos códigos de cada API e chamadas.
 
-![COMP_A](https://github.com/Moriblo/smuseum/blob/main/COMP_B2.png)
+![COMP_A](https://github.com/Moriblo/front/blob/main/COMP_A.png)
 
 ## Projeto
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados [https://github.com/users/Moriblo/projects/2]
