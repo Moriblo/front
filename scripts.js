@@ -136,11 +136,10 @@ const newItem = async() => {
       alert("A exceção do campo Link que é opcional, todos os demais campos devem estar preenchidos!");
       return; // Sai da função se houver campos vazios
     }
-    // Verifica se já há registro para mesma Obra e Artista (2ª Regra de Negócio)
+    // 2ª Regra de Negócio (RN2) - Verifica se já há registro para mesma Obra e Artista
     const obra_nome = inputNome;
     const obra_artista = inputArtista
     const retobrart = await getobrart(obra_nome, obra_artista);
-
     if (retobrart[2] !=0 ) {
       alert(`Já existe este registro na base: Obra = ${retobrart[0]} e Artista = ${retobrart[1]}`);
       return;
