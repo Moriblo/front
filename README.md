@@ -14,7 +14,7 @@ O usuário pode optar por buscar um link de imagem para a obra, deixando o campo
 
 1 - RN::Regra de Negócio.
 
-2 - O primeiro parágrafo acima trata da parte entregue na Sprint 1 (que foi reaproveitada), com algumas melhorias. Por exemplo, a otimização da RN2 colocando a consulta ao banco antes das chamadas às APIs, melhorando o tempo de retorno ao usuário quanto a realização da crítica.
+2 - O primeiro parágrafo acima trata da parte entregue na Sprint 1 (que foi reaproveitada), com algumas melhorias. Por exemplo, a otimização da RN2 colocando a consulta ao banco antes das chamadas às APIs, melhorando o tempo de retorno ao usuário quanto à realização da crítica.
 
 3 - O segundo parágrafo acima, trata da parte implementada para esta Sprint 3 (API_B1 e API_B2).
 
