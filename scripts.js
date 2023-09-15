@@ -140,7 +140,6 @@ const newItem = async() => {
     const obra_nome = inputNome;
     const obra_artista = inputArtista
     const retobrart = await getobrart(obra_nome, obra_artista);
-    // if (retobrart[2] !=0 )
     if (retobrart[2]) {
       alert(`Já existe este registro na base: Obra = ${retobrart[0]} e Artista = ${retobrart[1]}`);
       return;
@@ -155,8 +154,6 @@ const newItem = async() => {
         const valor_entrada = inputNome;
         const rettradu = await gettradutor(valor_entrada);
         
-        // alert(`O nome da obra foi traduzido de: ${inputNome} para: ${rettradu[2]}`)
-        
         // Verifica se a tradução faz sentido
         let obraTraduzida;
         const aceita_tradu = window.confirm(`A tradução de: <${inputNome}> foi realizada para <${rettradu[2]}>. Ok para aceitar tradução, Cancelar para seguir com o original`);
@@ -166,16 +163,6 @@ const newItem = async() => {
           obraTraduzida = inputNome;
         }
         
-/*
-        aceita_tradu = window.confirm(`A tradução de: <${inputNome}> foi realizada para <${rettradu[2]}>. Ok para aceitar tradução, Cancelar para seguir com o original`);
-        if (aceita_tradu) {
-          const obraTraduzida = rettradu[2];
-        }
-        else{
-          const obraTraduzida = inputNome
-        }
-*/
-
         // Chama a busca por link, utilizando as variáveis "obraTraduzida" que tem o 
         // resultado da aceitação ou não da tradução de português para inglês vindo 
         // de "gettradutor", e "artista" com o nome do artista, inserido da página 
