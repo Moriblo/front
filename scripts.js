@@ -254,7 +254,6 @@ function insertList(nome, artista, estilo, tipo, link) {
 */
 const getobrart = async (obra_nome, obra_artista) => {
   try {
-    //const url = `http://127.0.0.1:5000/obrart?obra_nome=${obra_nome}&obra_artista=${obra_artista}`;
     const url = `http://127.0.0.1:5000/obrart?nome=${obra_nome}&artista=${obra_artista}`;
     const response = await fetch(url, {
       method: 'get'
@@ -313,7 +312,7 @@ const getsmuseum = async (obraTraduzida, artista) => {
 
       alert(`A busca será realizada para obra: ${obraTraduzida} e artista: ${artista}`)
 
-      const url = `http://127.0.0.1:5002/smuseum?obra=${obraTraduzida}&artista=${artista}`;
+      const url = `http://127.0.0.1:5002/smuseum?nome=${obraTraduzida}&artista=${artista}`;
 
       // Realize a chamada assíncrona
       const response = await fetch(url);
