@@ -125,7 +125,7 @@ const newItem = async() => {
   let inputTipo = document.getElementById("newTipo").value;
   let inputLink = document.getElementById("newLink").value;
   
-  // Mostra a mensagem de carregamento
+  // Mostra a MENSAGEM DE PROCESSAMENTO
   const loadingMessage = document.getElementById("loading-message");
   loadingMessage.classList.remove("hidden"); // HTML: "Por favor, aguarde em processamento..."
 
@@ -140,7 +140,8 @@ const newItem = async() => {
     const obra_nome = inputNome;
     const obra_artista = inputArtista
     const retobrart = await getobrart(obra_nome, obra_artista);
-    if (retobrart[2] !=0 ) {
+    // if (retobrart[2] !=0 )
+    if (retobrart[2]) {
       alert(`Já existe este registro na base: Obra = ${retobrart[0]} e Artista = ${retobrart[1]}`);
       return;
     }
@@ -154,24 +155,55 @@ const newItem = async() => {
         const valor_entrada = inputNome;
         const rettradu = await gettradutor(valor_entrada);
         
-        // Chama a busca por link, utilizando as variáveis "rettradu" que tem o resultado
-        // da tradução de português para inglês vindo de "gettradutor", e "entrada_artista" 
-        // com o nome do artista, inserido no formulário na página web por "inputArtista".
-        const retmuseum = await getsmuseum(rettradu, inputArtista);
-                
-        // Pega o retorno "getmuseum" e verifica, pelo conteúdo do campo "retmuseum[link]",
-        // em JSON, e verifica se houve erro na obtenção da informação do "primaryImage".
+        // alert(`O nome da obra foi traduzido de: ${inputNome} para: ${rettradu[2]}`)
+        
+        // Verifica se a tradução faz sentido
+        let obraTraduzida;
+        const aceita_tradu = window.confirm(`A tradução de: <${inputNome}> foi realizada para <${rettradu[2]}>. Ok para aceitar tradução, Cancelar para seguir com o original`);
+        if (aceita_tradu) {
+          obraTraduzida = rettradu[2];
+        } else {
+          obraTraduzida = inputNome;
+        }
+        
+/*
+        aceita_tradu = window.confirm(`A tradução de: <${inputNome}> foi realizada para <${rettradu[2]}>. Ok para aceitar tradução, Cancelar para seguir com o original`);
+        if (aceita_tradu) {
+          const obraTraduzida = rettradu[2];
+        }
+        else{
+          const obraTraduzida = inputNome
+        }
+*/
+
+        // Chama a busca por link, utilizando as variáveis "obraTraduzida" que tem o 
+        // resultado da aceitação ou não da tradução de português para inglês vindo 
+        // de "gettradutor", e "artista" com o nome do artista, inserido da página 
+        // principal por "inputArtista".
+        const artista = inputArtista;
+        const retmuseum = await getsmuseum(obraTraduzida, artista);
+        
+        // Pega o retorno "getmuseum" e verifica, pelo conteúdo do campo 
+        // "retmuseum.link", em JSON, se houve erro na obtenção da informação.
         if (retmuseum.link.includes("Erro")) {
           return_link = window.confirm(`Foi recebida a seguinte msg: <${retmuseum.link}>. Ok para salvar sem link, Cancelar para voltar à entrada.`);
           if (return_link) {
             inputLink = '';
+            postItem(inputNome, inputArtista, inputEstilo, inputTipo, inputLink);
+            return;
           } 
           else {
-            //inputLink = retmuseum.link[0]
-            return; // Sai da função
+            return;
           }
         }
-        inputLink = retmuseum.link;
+        salva_link = window.confirm(`O link obtido para a obra é: <${retmuseum.link}>. Ok para salvar, Cancelar para voltar à entrada.`);
+          if (salva_link) {
+            inputLink = retmuseum.link;
+          }
+          else {
+            inputLink = '';
+            return;
+          }
       }
       else {
         inputLink = '';
@@ -182,10 +214,13 @@ const newItem = async() => {
   }
   catch (error) {
     console.error(error);
-  } finally {
-    // Esconde a mensagem de carregamento
-    loadingMessage.classList.add("hidden"); // HTML: "Aguarde, em processamento..."
+  } 
+  
+  finally {
+    // Esconde a MENSAGEM DE PROCESSAMENTO
+    loadingMessage.classList.add("hidden");
   }
+
 }
 
 /* INSERIR ITENS NA LISTA
@@ -219,7 +254,8 @@ function insertList(nome, artista, estilo, tipo, link) {
 */
 const getobrart = async (obra_nome, obra_artista) => {
   try {
-    const url = `http://127.0.0.1:5000/obrart?obra_nome=${obra_nome}&obra_artista=${obra_artista}`;
+    //const url = `http://127.0.0.1:5000/obrart?obra_nome=${obra_nome}&obra_artista=${obra_artista}`;
+    const url = `http://127.0.0.1:5000/obrart?nome=${obra_nome}&artista=${obra_artista}`;
     const response = await fetch(url, {
       method: 'get'
     });
@@ -274,6 +310,9 @@ const gettradutor = async (valor_entrada) => {
 const getsmuseum = async (obraTraduzida, artista) => {
   try {
       // Construa a URL com os parâmetros
+
+      alert(`A busca será realizada para obra: ${obraTraduzida} e artista: ${artista}`)
+
       const url = `http://127.0.0.1:5002/smuseum?obra=${obraTraduzida}&artista=${artista}`;
 
       // Realize a chamada assíncrona
