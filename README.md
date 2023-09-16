@@ -31,7 +31,7 @@ Estrutura dos códigos de cada API e chamadas.
 ## Diagrama de Fluxo
 Fluxo de dados no sistema
 
-![SFD]
+![SFD](https://github.com/Moriblo/front/blob/main/SFD.png)
 
 ## Projeto
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados [https://github.com/users/Moriblo/projects/2/views/5]
