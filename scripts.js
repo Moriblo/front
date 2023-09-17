@@ -47,6 +47,7 @@ const postItem = async (inputNome, inputArtista, inputEstilo, inputTipo, inputLi
   .then(response => {
       if (response.ok) {
         insertList(inputNome, inputArtista, inputEstilo, inputTipo, inputLink);
+        //Msg_4
         alert("Obra inserida com sucesso!");
       }
       else {
@@ -133,6 +134,7 @@ const newItem = async() => {
 
     // 1ª Regra de Negócio (RN1) - Verifica se há algum campo obrigatório vazio
     if (inputNome === '' || inputArtista === ''|| inputEstilo === '' || inputTipo === '') {
+      // Msg_1
       alert("A exceção do campo Link que é opcional, todos os demais campos devem estar preenchidos!");
       return; // Sai da função se houver campos vazios
     }
@@ -141,12 +143,14 @@ const newItem = async() => {
     const obra_artista = inputArtista
     const retobrart = await getobrart(obra_nome, obra_artista);
     if (retobrart[2]) {
+      // Msg_2
       alert(`Já existe este registro na base: Obra = ${retobrart[0]} e Artista = ${retobrart[1]}`);
       return;
     }
 
     // Verifica se o campo Link está vazio para ofertar a busca por uma imagem.
     if (inputLink === '') {
+      // Msg_3
       busca_imagem = window.confirm("Ok para buscar um link para a obra ou Cancelar para salvar sem link?");
       if (busca_imagem) {
         // Chama a tradução de português para o inglês do "valor_entrada", que contém o 
@@ -156,6 +160,7 @@ const newItem = async() => {
         
         // Verifica se a tradução faz sentido
         let obraTraduzida;
+        // Msg_5
         const aceita_tradu = window.confirm(`A tradução de: <${inputNome}> foi realizada para <${rettradu[2]}>. Ok para aceitar tradução, Cancelar para seguir com o original`);
         if (aceita_tradu) {
           obraTraduzida = rettradu[2];
@@ -173,6 +178,7 @@ const newItem = async() => {
         // Pega o retorno "getmuseum" e verifica, pelo conteúdo do campo 
         // "retmuseum.link", em JSON, se houve erro na obtenção da informação.
         if (retmuseum.link.includes("Erro")) {
+          // Msg_7
           return_link = window.confirm(`Foi recebida a seguinte msg: <${retmuseum.link}>. Ok para salvar sem link, Cancelar para voltar à entrada.`);
           if (return_link) {
             inputLink = '';
@@ -183,6 +189,7 @@ const newItem = async() => {
             return;
           }
         }
+        // Msg_8
         salva_link = window.confirm(`O link obtido para a obra é: <${retmuseum.link}>. Ok para salvar, Cancelar para voltar à entrada.`);
           if (salva_link) {
             inputLink = retmuseum.link;
@@ -296,7 +303,7 @@ const gettradutor = async (valor_entrada) => {
 const getsmuseum = async (obraTraduzida, artista) => {
   try {
       // Construa a URL com os parâmetros
-
+      // Msg_6
       alert(`A busca será realizada para obra: ${obraTraduzida} e artista: ${artista}`)
 
       const url = `http://127.0.0.1:5002/smuseum?nome=${obraTraduzida}&artista=${artista}`;
