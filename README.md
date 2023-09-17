@@ -2,7 +2,7 @@
 
 ## Introdução
 MVP da Sprint 3 do curso de pós gradução em Engenharia de Software da PUC.
-Trata-se de um Projeto (Obras de Arte) que a partir das opções do usuário na interface, seleciona APIs, com serviços específicos a serem consumidos, com o objetivo final de disponibilizar um link de uma imagem para uma dada Obra e Artista.
+Trata-se de um Projeto (Obras de Arte) que a partir das opções do usuário na interface, seleciona APIs, com serviços específicos a serem consumidos, com o objetivo final de salvar obras de arte em uma BD,  podendo se utilizar de uma busca para disponibilizar um link de uma imagem para uma dada Obra e Artista.
 
 ## Utilização do Aplicativo:
         
