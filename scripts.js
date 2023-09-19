@@ -191,11 +191,9 @@ const newItem = async() => {
         }
         // Msg_8
         let salva_link
-        salva_link = window.confirm(`O link obtido para a obra é: <${retmuseum.link}>. Ok para prévia da imagem, Cancelar para voltar à entrada.`);
-        alert(`salva_link: ${salva_link}`);
+        salva_link = window.confirm(`O link obtido para a obra é: <${retmuseum.link}>. Ok para salvar, Cancelar para voltar à entrada.`);
           if (salva_link) {
-            alert(`URL: ${url} e LINK: ${linkUrl} e IMAGEM: ${imageUrl}`);
-
+            inputLink = retmuseum.link
           }
           else {
             inputLink = '';
