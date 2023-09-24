@@ -24,8 +24,8 @@ Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona
 
 > [!IMPORTANT]
 > * __[API_C - Obras de Arte [app.py]](https://github.com/Moriblo/app)__
-> * __[API_B1 - Tradutor [tradutor.py]]__(https://github.com/Moriblo/tradutor)
-> * __[API Search in Museum [smuseum.py]]__(https://github.com/Moriblo/smuseum)
+> * __[API_B1 - Tradutor [tradutor.py]](https://github.com/Moriblo/tradutor)__
+> * __[API_B2 - Search in Museum [smuseum.py]](https://github.com/Moriblo/smuseum)__
 
 ## Estrutura do Código e Chamadas
 Estrutura dos códigos de cada API e chamadas.
