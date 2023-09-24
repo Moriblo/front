@@ -23,7 +23,7 @@ Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona
 ![Front](https://github.com/Moriblo/front/blob/main/Front.png)
 
 > [!IMPORTANT]
-> * __[API_C - Obras de Arte [app.py]]__(https://github.com/Moriblo/app)
+> * __[API_C - Obras de Arte [app.py]](https://github.com/Moriblo/app)__
 > * __[API_B1 - Tradutor [tradutor.py]]__(https://github.com/Moriblo/tradutor)
 > * __[API Search in Museum [smuseum.py]]__(https://github.com/Moriblo/smuseum)
 
