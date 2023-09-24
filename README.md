@@ -1,10 +1,11 @@
 # Projeto Obras de Arte [Front]
 
 ## Introdução
+
 MVP da Sprint 3 do curso de pós gradução em Engenharia de Software da PUC.
 Trata-se de um Projeto (Obras de Arte) que a partir das opções do usuário na interface, seleciona APIs, com serviços específicos a serem consumidos, com o objetivo final de salvar obras de arte em uma BD,  podendo se utilizar de uma busca para disponibilizar um link de uma imagem para uma dada Obra e Artista.
 
-## Utilização do Aplicativo:
+## Utilização do Aplicativo
         
 Este Projeto (Obras de Arte) tem por objetivo realizar o cadastro de obras de arte, sejam pinturas, esculturas ou outras, através 
 de uma base de dados utilizando-se de uma API (app.py) para manipulação desta base. Este cadastro armazena o nome da obra, o nome do artista, o estilo de época da obra (Renascimento, Barroco, Neoclassicismo, dentre outros), além do tipo, que informa se é uma pintura, uma escultura ou outro tipo. Adicionalmente, cadastra-se também um link que direciona para um ambiente que traz informações adicionais à obra. Os campos: Obra, Artista, Estilo, Tipo e Link são utilizados para realizar o cadastro das obras, uma vez acionando o botão “Adicionar”. Os campos: Obra, Artista, Estilo e Tipo são campos obrigatórios (RN1). É permitido que o cadastro aconteça sem um link relacionado à obra. Não são permitidos cadastros de uma obra de mesmo nome e mesmo artista (RN2). Porém, caso haja uma obra de mesmo nome, mas para artistas diferentes, é permitida esta inserção.
@@ -18,6 +19,7 @@ O usuário pode optar por buscar um link de imagem para a obra, deixando o campo
 > 4. A  API Search in Museum (smuseum.py) foi criada inicialmente para buscar em vários museus previamente cadastrados. Porém, por conta de restrições de copyright, só se encontrou o NY Metropolitan Museum, com uma base suficiente para utilização neste projeto. Portanto a API, atualmente, só busca na base do NY Metropolitan Museum mas, como pode ser visto no código, esta API já está previamente estruturada para receber, no futuro, links, campos e demais informações para busca em outras bases de museus que não tenham restrições de copyright.
 
 ## Arquitetura
+
 Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona a API a ser utilizada a medida das opções do usuário.
 
 ![Front](https://github.com/Moriblo/front/blob/main/Front.png)
@@ -28,12 +30,14 @@ Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona
 > * __[API_B2 - Search in Museum [smuseum.py]](https://github.com/Moriblo/smuseum)__
 
 ## Estrutura do Código e Chamadas
-Estrutura dos códigos de cada API e chamadas.
+
+Estrutura dos códigos de cada API e chamadas:
 
 ![COMP_A](https://github.com/Moriblo/front/blob/main/COMP_A.png)
 
 ## Diagrama de Fluxo
-Fluxo de dados no sistema
+
+Fluxo de dados no sistema:
 
 ![SFD](https://github.com/Moriblo/front/blob/main/SFD.png)
 
@@ -41,7 +45,7 @@ Fluxo de dados no sistema
 
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados:
 
-[*** Requisitos de Projeto ***](https://github.com/users/Moriblo/projects/2/views/5)
+### [Requisitos de Projeto](https://github.com/users/Moriblo/projects/2/views/5)
 
 > [!NOTE]
 > * __REQ_A :: Requisitos do Front__
