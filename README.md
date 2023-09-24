@@ -11,7 +11,7 @@ de uma base de dados utilizando-se de uma API (app.py) para manipulação desta 
 
 O usuário pode optar por buscar um link de imagem para a obra, deixando o campo Link vazio, e respondendo ao questionamento do sistema de forma apropriada. Caso opte pela busca de um link de imagem, o sistema fará, primeiramente e automaticamente, através de uma API (tradutor.py), a tradução do nome da obra de português para inglês, dando a opção ao usuário de definir se faz sentido realizar a busca do link da imagem pelo nome traduzido da obra ou não. A patir daí o sistema realizará, também de forma automática, utilizando-se de uma segunda API (smuseum.py), a busca pelo nome da obra (agora com o nome traduzido para o inglês ou pelo original, conforme escolhido pelo usuário) em um museu, e retornará ao usuário a resposta da busca. A resposta ou constará com o link encontrado, ou a informação de que, ou a obra não existe na base do museu consultado, ou o artista não existe na base do museu consultado. Todas as demais informações inicialmente inseridas nos demais campos serão mantidas como inseridas pelo usuário, inclusive com o nome original da obra, como inicialmente fornecido pelo usuário.
 
-### > [!NOTE]
+### [!NOTE]
 
 1 - RN::Regra de Negócio.
 
