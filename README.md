@@ -45,7 +45,7 @@ Fluxo de dados no sistema:
 
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados:
 
-### [Requisitos de Projeto](https://github.com/users/Moriblo/projects/2/views/5)
+### [Link para os Issues do Projeto](https://github.com/users/Moriblo/projects/2/views/5)
 
 > [!NOTE]
 > * __REQ_A :: Requisitos do Front__
