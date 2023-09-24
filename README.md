@@ -18,6 +18,8 @@ O usuário pode optar por buscar um link de imagem para a obra, deixando o campo
 
 3 - O segundo parágrafo acima, trata da parte implementada para esta Sprint 3 (API_B1 e API_B2).
 
+4 - A  API Search in Museum (smuseum.py) foi criada inicialmente para buscar em vários museus previamente cadastrados. Porém, por conta de restrições de copyright, só se encontrou o NY Metropolitan Museum, com uma base suficiente para utilização neste projeto. Portanto a API atualmente, só busca na base do NY Metropolitan Museum, mas como pode ser visto no código, esta API já está previamente estruturada para receber links, campos e demais informações para busca em outras bases de museus que não tenham restrições de copyright.
+
 ## Arquitetura
 Arquitetura do Projeto Obras de Arte com destaque para o FrontEnd, que seleciona a API a ser utilizada a medida das opções do usuário.
 
