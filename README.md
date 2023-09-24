@@ -37,7 +37,7 @@ Fluxo de dados no sistema
 
 ## Projeto
 
-Detalhamento dos requisitos (REQ) do MVP e demais issues tratados
+Detalhamento dos requisitos (REQ) do MVP e demais issues tratados:
 
 [https://github.com/users/Moriblo/projects/2/views/5]
 
