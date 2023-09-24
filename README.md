@@ -43,7 +43,8 @@ Detalhamento dos requisitos (REQ) do MVP e demais issues tratados:
 
 [https://github.com/users/Moriblo/projects/2/views/5]
 
-* __REQ_A :: Requisitos do Front__
-* REQ_B1 :: Requisitos da API Tradutor (tradutor.py)
-* REQ_B2 :: Requisitos da API Search in Museum (smuseum.py)
-* REQ_C :: Requisitos da API Obras de Arte (app.py)
+> [!NOTE]
+> * __REQ_A :: Requisitos do Front__
+> * REQ_B1 :: Requisitos da API Tradutor (tradutor.py)
+> * REQ_B2 :: Requisitos da API Search in Museum (smuseum.py)
+> * REQ_C :: Requisitos da API Obras de Arte (app.py)
