@@ -2,8 +2,6 @@
 
 ![Front](https://github.com/Moriblo/front/blob/main/Front.png)
 
-> ## 🏃 __[Executar front](https://moriblo.github.io/front/)__
-
 ## Projeto
 
 Detalhamento dos requisitos (REQ) do MVP e demais issues tratados:
