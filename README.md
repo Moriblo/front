@@ -2,7 +2,7 @@
 
 ![Front](https://github.com/Moriblo/front/blob/main/Front.png)
 
-> 🏃## __[Executar front](https://moriblo.github.io/front/)__
+> ## 🏃 __[Executar front](https://moriblo.github.io/front/)__
 
 ## Projeto
 
