@@ -1,4 +1,4 @@
-# Front_A Chama API #### 🔙<span style="font-size: 10px;">texto pequeno</span> [Volta](https://github.com/Moriblo)
+# Front_A Chama API #### 🔙<span style="font-size: 10px;">texto pequeno</span>
 
 <span style="font-size: 30px;">Texto grande</span> e <span style="font-size: 10px;">texto pequeno</span> na mesma linha.
 
