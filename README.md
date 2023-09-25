@@ -1,4 +1,4 @@
-# Front_A Chama API #### 🔙<span style="font-size: 10px;">texto pequeno</span>
+# Front_A Chama API 🔙
 
 <span style="font-size: 30px;">Texto grande</span> e <span style="font-size: 10px;">texto pequeno</span> na mesma linha.
 
